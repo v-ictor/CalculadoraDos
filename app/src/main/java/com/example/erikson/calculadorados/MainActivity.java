@@ -105,20 +105,24 @@ public class MainActivity extends AppCompatActivity {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
 //            return PlaceholderFragment.newInstance(position + 1);
+            SumaFragment suma = new SumaFragment();
+            RestaFragment resta = new RestaFragment();
+            MultiFragment multi = new MultiFragment();
+            DiviFragment divi = new DiviFragment();
 
             if (position == 0 ){
-                return new SumaFragment();
+                return suma;
             }
             if (position == 1){
-                return new RestaFragment();
+                return resta;
             }
             if (position == 2 ){
-                return new SumaFragment();
+                return multi;
             }
             if (position == 3){
-                return new SumaFragment();
+                return divi;
             }
-            return new SumaFragment();
+            return suma;
         }
 
         @Override
